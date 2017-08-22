@@ -11,12 +11,11 @@ const axios = Axios.create(config);
 
 // 支持post提交
 axios.interceptors.request.use( (config)=>{
-    // config.headers = {'Access-Control-Allow-Origin': '*'};
-    // config.headers['Access-Control-Allow-Origin'] = '*';
+
 
     let config_data = config.data;
-    if(config.dataType==="json") return config
-    if(config_data ){  //&& config_data.toString() !== '[object FormData]'
+    if(config.dataType==="json") return config;
+    if(config_data ){
         config.data = qs.stringify(config_data);
     }
 

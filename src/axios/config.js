@@ -3,7 +3,7 @@
  */
 
 export  default  {
-    baseURL: process.env.NODE_ENV === 'development' ? 'http://monitor.oa.fenqile.com' : '/',
+    baseURL:  '/',
     withCredentials: true,
     headers : {
 

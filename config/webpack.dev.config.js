@@ -89,10 +89,7 @@ module.exports = {
     performance: {
         hints: false
     },
-    devtool: '#eval-source-map',
-    plugins: [
 
-    ]
 }
 
 module.exports.devtool = '#source-map'
