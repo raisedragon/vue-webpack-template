@@ -2,7 +2,7 @@
  * Created by willchen on 2017/3/20.
  */
 
-const Index = resolve => require(['../page/statistics/Index.vue'], resolve),          //我的工作台
+const Index = resolve => require(['../page/index/Index.vue'], resolve),          //首页
 
 
 

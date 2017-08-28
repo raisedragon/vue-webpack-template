@@ -3,7 +3,7 @@
  */
 export default {
     state: {
-        oneKeying: [],  //正在一键操作的机器
+        oneKeying: [],
     },
     getters: {
         hasOneKey(state, getters, rootState){
