@@ -1,8 +1,8 @@
 <template>
     <div id="app">
+
         <Sidebar></Sidebar>
 
-        <Logout></Logout>
 
 
         <section class="main">
@@ -10,7 +10,7 @@
                     appear
                     name="fade"
                     mode="out-in">
-                <!--:include="['PublishOrderListComp','AppList', 'PublishPlanListComp', 'AppActionListComp']"-->
+
                 <keep-alive :include="keepAliveList" >
                     <router-view >
 
@@ -27,11 +27,7 @@
 
 
 <script>
-
-    import Sidebar from './components/Sidebar.vue'
-    import Logout from 'components/Logout.vue'
-    import ExternalLink from 'components/ExternalLink.vue'
-    import {mapState} from  'vuex'
+    import Sidebar from 'components/Sidebar'
 
     export default {
         name: 'app',
@@ -42,11 +38,11 @@
         },
         components: {
             Sidebar,
-            Logout,
-            ExternalLink,
+
+
         },
         computed: {
-            ...mapState(['menuList'])
+
         },
 
 
@@ -67,7 +63,7 @@
 
         background-color: $mainBgc;
 
-/*
+    /*
         perspective: 1500px;
         perspective-origin: 50% 0;
 

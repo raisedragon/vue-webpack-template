@@ -1,14 +1,13 @@
 {
   "presets": [
-      "es2015",
-      "stage-0"
+      "env"
   ],
   "plugins": [
     "transform-vue-jsx",
     [
       "transform-runtime",
       {
-        "polyfill": false,
+        "polyfill": true,
         "regenerator": true
       }
     ]

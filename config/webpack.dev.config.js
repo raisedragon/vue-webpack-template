@@ -81,7 +81,7 @@ module.exports = {
     },
     devServer: {
         host: '0.0.0.0',
-        port: 30181,
+        port: 8080,
         disableHostCheck: true,
         historyApiFallback: true,
         noInfo: true
