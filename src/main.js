@@ -6,11 +6,12 @@ import VueRouter from "vue-router";
 
 import 'style/common/common.scss'
 
-
+/* 注册路由组件 */
 Vue.use(VueRouter);
 
 import 'element-ui/lib/theme-default/index.css'
 import ElementUI from 'element-ui'
+/* 注册 ElementUI 组件*/
 Vue.use(ElementUI);
 
 
@@ -23,25 +24,14 @@ Vue.prototype.$http = Axios;
 import routes from './routes/index'
 import store from './store/index'
 
-console.log('env', process.env.NODE_ENV  );
-
-
-
-
-
-
-
-
-
-
-
+/* 路由创建 */
 const router = new VueRouter({
     // mode: 'history',
     base: __dirname,
     routes,
 });
 
-
+/* 创建应用 */
 new Vue({
     store,
     router,
