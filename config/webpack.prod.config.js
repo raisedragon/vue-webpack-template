@@ -115,7 +115,7 @@ module.exports.plugins = (module.exports.plugins || []).concat([
         favicon: resolve(webRootDir, './src/static/ico_pb_16X16.ico' ),
         template: resolve(webRootDir, './index-template.html' ),
         filename:   '../index.html'  ,
-        title: '乐信发布系统',
+        title: 'XX系统',
     }),
     /*变量定义*/
     new webpack.DefinePlugin({
