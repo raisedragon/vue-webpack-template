@@ -1,3 +1,7 @@
+# 使用
+1. `cnpm i` or `npm i`
+2. `npm run local`
+
 # Why
 1. code-split 实现 路由文件分割，懒加载路由，减少打包体积
 2. 抽离第三方库单独打包，分离业务代码与库的代码
