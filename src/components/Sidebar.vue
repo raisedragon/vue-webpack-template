@@ -1,6 +1,16 @@
 <template>
     <aside class="nav">
+        <div class="logo">
+            <!--<img src="../../static/publish_logo.png" alt="logo" class="logo-img">乐信发布系统-->
+            XXXX系统
 
+        </div>
+
+
+        <figure class="user">
+            <img src="../static/default_avatar.png" alt="头像" class="avatar">
+            <figcaption>{{userName}}</figcaption>
+        </figure>
 
 
         <el-menu unique-opened
@@ -26,7 +36,7 @@
             </template>
 
 
-         </el-menu>
+        </el-menu>
 
 
     </aside>
@@ -37,133 +47,70 @@
 
 
     export  default {
+        name: 'SideBar',
         data() {
             return {
                 /*左侧导航菜单列表*/
-                menuList: [ {
-                    "id": 19,
-                    "creator": "willchen",
-                    "createTime": "2017-07-14 14:11:11",
-                    "modifier": "willchen",
-                    "modifyTime": "2017-07-14 15:52:54",
-                    "status": 1,
-                    "version": 2,
-                    "pid": 0,
-                    "name": "应用发布",
-                    "url": "/appManage",
-                    "sort": 0,
-                    "icon": "upload",
-                    "route": "",
-                    "children": [{
-                        "id": 24,
-                        "creator": "willchen",
-                        "createTime": "2017-07-14 14:20:01",
-                        "modifier": "pikefeng",
-                        "modifyTime": "2017-07-14 18:31:00",
-                        "status": 1,
-                        "version": 3,
-                        "pid": 19,
-                        "name": "应用管理",
-                        "url": "/app",
-                        "sort": 0,
-                        "icon": "",
-                        "route": "",
-                        "children": []
-                    }, {
-                        "id": 25,
-                        "creator": "willchen",
-                        "createTime": "2017-07-14 14:21:51",
-                        "modifier": "willchen",
-                        "modifyTime": "2017-07-14 14:21:51",
-                        "status": 1,
-                        "version": 1,
-                        "pid": 19,
-                        "name": "应用版本发布",
-                        "url": "/verPub",
-                        "sort": 0,
-                        "icon": "",
-                        "route": "",
-                        "children": []
-                    }, {
-                        "id": 26,
-                        "creator": "willchen",
-                        "createTime": "2017-07-14 14:22:18",
-                        "modifier": "willchen",
-                        "modifyTime": "2017-07-14 14:22:18",
-                        "status": 1,
-                        "version": 1,
-                        "pid": 19,
-                        "name": "应用操作流水",
-                        "url": "/appAction",
-                        "sort": 0,
-                        "icon": "",
-                        "route": "",
-                        "children": []
-                    }, {
-                        "id": 46,
-                        "creator": "raisewang",
-                        "createTime": "2017-08-01 15:56:38",
-                        "modifier": "raisewang",
-                        "modifyTime": "2017-08-03 18:35:26",
-                        "status": 1,
-                        "version": 3,
-                        "pid": 19,
-                        "name": "PHP配置发布",
-                        "url": "/phpconfPub",
-                        "sort": 0,
-                        "icon": "",
-                        "route": "",
-                        "children": []
-                    }]
-                }, {
-                    "id": 21,
-                    "creator": "willchen",
-                    "createTime": "2017-07-14 14:17:45",
-                    "modifier": "willchen",
-                    "modifyTime": "2017-07-14 15:53:25",
-                    "status": 1,
-                    "version": 2,
-                    "pid": 0,
-                    "name": "发布管理",
-                    "url": "/pubManage",
-                    "sort": 0,
-                    "icon": "document",
-                    "route": "",
-                    "children": [{
-                        "id": 29,
-                        "creator": "willchen",
-                        "createTime": "2017-07-14 14:24:52",
-                        "modifier": "willchen",
-                        "modifyTime": "2017-07-14 14:24:52",
-                        "status": 1,
-                        "version": 1,
-                        "pid": 21,
-                        "name": "IP应用管理",
-                        "url": "/ipApp",
-                        "sort": 0,
-                        "icon": "",
-                        "route": "",
-                        "children": []
-                    }]
+                menuList: [
+                    {
+                        id: '0',
+                        icon: 'menu',
+                        url: '/',
+                        name: '工作台',
+                        children: []
+                    },
+                    {
+                        "id": 19,
+                        "name": "应用发布",
+                        "url": "/appManage",
+                        "icon": "upload",
+                        "children": [
+                            {
+                                "id": 26,
+                                "name": "应用操作流水",
+                                "url": "/appAction",
+                                "icon": "",
+                                "children": []
+                            },
+                            {
+                                "id": 46,
+                                "name": "PHP配置发布",
+                                "url": "/phpconfPub",
+                                "icon": "",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": 21,
+                        "name": "发布管理",
+                        "url": "/pubManage",
+                        "icon": "document",
+                        "children": [
+                            {
+                                "id": 29,
+                                "name": "IP应用管理",
+                                "url": "/ipApp",
+                                "icon": "",
+                                "children": []
+                            }
+                        ]
 
-                }],
-                userName: '',
+                    }
+                ],
+                userName: 'system',
             }
         },
 
 
         methods: {
-            addMenu() {
-                let listItem = {url:'/test', name: '测试',children: []};
-                this.menuList.push(listItem)
 
-            },
 
 
         },
 
         mounted() {
-            this.addMenu();
+
         }
 
     }
