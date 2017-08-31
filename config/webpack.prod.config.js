@@ -19,7 +19,7 @@ module.exports = {
     },
     output: {
         path: resolve(webRootDir, './build'),
-        publicPath: '/build/',
+        // publicPath: '/build/',
         filename: '[name].[chunkhash:8].js'
     },
     module: {
@@ -115,7 +115,7 @@ module.exports.plugins = (module.exports.plugins || []).concat([
     new HtmlWebpackPlugin({
         // favicon: resolve(webRootDir, './src/static/ico_pb_16X16.ico' ),
         template: resolve(webRootDir, './index-template.html' ),
-        filename:   '../index.html'  ,
+        filename:   'index.html'  ,
         title: 'XX系统',
     }),
     /*变量定义*/
