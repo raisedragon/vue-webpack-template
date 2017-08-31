@@ -6,7 +6,7 @@ const webRootDir = resolve(__dirname, '../');
 
 
 module.exports = {
-    entry: resolve(webRootDir, './src/main.js'),
+    entry: [resolve(webRootDir, './src/main.js'), "babel-polyfill"],
     output: {
         path: resolve(webRootDir, './build'),
         publicPath: '/build/',

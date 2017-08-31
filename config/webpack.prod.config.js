@@ -13,6 +13,7 @@ const webRootDir = resolve(__dirname, '../');
 
 module.exports = {
     entry: {
+        "babel-polyfill": "babel-polyfill",
         vendor: resolve(webRootDir, './src/vendor.js'),
         main: resolve(webRootDir, './src/main.js'),
     },

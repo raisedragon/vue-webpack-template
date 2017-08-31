@@ -2,7 +2,7 @@
  * Created by willchen on 2017/7/18.
  */
 
-import 'babel-polyfill'
+
 import 'vue'
 import 'vuex'
 import 'vue-router'
