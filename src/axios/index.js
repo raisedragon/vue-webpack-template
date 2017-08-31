@@ -15,6 +15,7 @@ axios.interceptors.request.use( (config)=>{
 
     let config_data = config.data;
     if(config.dataType==="json") return config;
+    /* form data形式提交 */
     if(config_data ){
         config.data = qs.stringify(config_data);
     }

@@ -17,7 +17,7 @@ module.exports = {
         main: resolve(webRootDir, './src/main.js'),
     },
     output: {
-        path: resolve(webRootDir, '../resources/static/build'),
+        path: resolve(webRootDir, './build'),
         publicPath: '/build/',
         filename: '[name].[chunkhash:8].js'
     },
@@ -112,7 +112,7 @@ module.exports.plugins = (module.exports.plugins || []).concat([
 
     /*pc端入口配置*/
     new HtmlWebpackPlugin({
-        favicon: resolve(webRootDir, './src/static/ico_pb_16X16.ico' ),
+        // favicon: resolve(webRootDir, './src/static/ico_pb_16X16.ico' ),
         template: resolve(webRootDir, './index-template.html' ),
         filename:   '../index.html'  ,
         title: 'XX系统',
